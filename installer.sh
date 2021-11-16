@@ -17,6 +17,7 @@ else
 	echo "git package already installed"
 fi
 
+
 # check if zsh installed
 if ! command -v 'zsh' $> /dev/null
 then
@@ -35,6 +36,16 @@ else
 	echo "tmux package already installed"
 fi
 
+# check if node js installed
+if ! command -v 'node' $> /dev/null
+then
+	echo "node package not installed, installing...\n"
+	sudo apt-get update
+        sudo apt-get install nodejs
+	sudo apt-get install npm
+else
+	echo "node package already installed"
+fi
 
 # check if dotfiles installed
 if ! command -v 'dotfiles' $> /dev/null
@@ -45,20 +56,16 @@ else
 	echo "dotfiles package already installed"
 fi
 
-# check if node js installed
-if ! command -v 'node' $> /dev/null
-then
-	echo "node package not installed, installing...\n"
-    dotfiles install node
-else
-	echo "node package already installed"
-fi
+sudo apt-get install exuberant-ctags
+sudo apt-get install tree
+sudo apt-get install silversearcher-ag
 
 # custom configurations
 echo 'Adding custom configurations'
 touch $HOME/.vimrc.local
 
-echo 'se nu rnu
+echo 'se nu
+se nu rnu
 nnoremap <space> zO
 vnoremap <space> zc
 
