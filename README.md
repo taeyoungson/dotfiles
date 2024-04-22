@@ -1,7 +1,7 @@
 # Personal Dotfile Scripts
 
 Build file for personal terminal configuration.  
-Check building and deploying containers. 
+Check building and deploying containers.  
 Note that you do not have to clone this repository, just copy and paste build snippet. 
 
 ### Build your image
