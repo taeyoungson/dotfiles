@@ -2,6 +2,7 @@
 
 Build file for personal terminal configuration.  
 Check building and deploying containers. 
+Note that you do not have to clone this repository, just copy and paste build snippet. 
 
 ### Build your image
 ```bash
@@ -17,7 +18,7 @@ docker build \
 --build-arg GIT_EMAIL={GIT_EMAIL} \
 .
 ```
-### Run your image
+### Run your container
 ```bash
 docker run -it \
 --gpus all \
